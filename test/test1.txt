@@ -1,0 +1,18 @@
+int demo(int a) {
+	a = a + 2;
+	return a * 2;
+}
+
+int main() {
+  int a;
+  int b;
+  int c[3];
+  a = 3;
+  b =5;
+  int i; 
+  for (i=0; i<=(b-a); i=i+1) {
+    c[i] = i;
+  }
+  a = demo(c[2]);
+  return a;
+}

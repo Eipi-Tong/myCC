@@ -1,0 +1,16 @@
+int program(int a, int b, int c) {
+  int i = a;
+  while (i <= 100) {
+    i = i * 2;
+    /* 注释 
+    */
+  }
+  return i;
+}
+
+// 注释
+int main() {
+  int a;
+  a = program(3,4,8);
+  return a;
+}
