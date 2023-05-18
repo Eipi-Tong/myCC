@@ -1,0 +1,5 @@
+bin
+build
+test/*
+!test/*.txt
+!test/*.sh

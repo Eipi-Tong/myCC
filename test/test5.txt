@@ -9,6 +9,8 @@ int program(int a,int b,int c) {
   return j;
 }
 
+/* 注释 
+ */
 int demo(int a) {
   a=a+2;
   return a*2;
@@ -16,6 +18,7 @@ int demo(int a) {
 
 int main()
 {
+  // 注释
   int a[2][2];
   a[0][0]=3;
   a[0][1]=a[0][0]+1;
