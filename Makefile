@@ -13,7 +13,7 @@ INC := -I include
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking..."; 
-	@mkdir $(TARGETDIR);
+	@mkdir -p $(TARGETDIR);
 	@echo " $(CC) $^ -o $(TARGET) $(LIB)"; $(CC) $^ -o $(TARGET) $(LIB)
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
@@ -25,7 +25,7 @@ test: $(TARGET)
 	@echo " Testing..."
 	@echo " sh test/test.sh"; sh test/test.sh
 
-clean:
+clean: test
 	@echo " Cleaning..."; 
 	@echo " $(RM) -r $(BUILDDIR) $(TARGETDIR)"; $(RM) -r $(BUILDDIR) $(TARGETDIR); 
 	@echo " rm -rf `find test/* | egrep -v '(test.sh|*.txt)'`"; rm `find test/* | egrep -v '(test.sh|*.txt)'`;
